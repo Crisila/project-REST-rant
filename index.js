@@ -5,6 +5,8 @@ const express = require('express')
 // 9. Initialize the app variable
 const app = express()
 
+app.use('/places', require('./controllers/places'))
+
 // 10. Create the home page route
 //    a. Call app.get()
 //    b. Set ‘/‘ as the path (first arg)
