@@ -13,12 +13,13 @@ app.use('/places', require('./controllers/places'))
 //    c. Write callback function with req, res
 app.get('/', (req, res) => {
     //    d. Call res.send(‘hello world’) 
-    res.status(404).send('<h1>404 Page</h1>')
+    res.send('Hello World')
 
 })
 
-app.get('*', (req, res) => {
 
+app.get('*', (req, res) => {
+    res.status(404).send(`<h1>404 Page</h1>`)
 })
 
 
