@@ -25,7 +25,9 @@ app.get('/', (req, res) => {
 
 
 app.get('*', (req, res) => {
-    res.status(404).send(`<h1>404 Page</h1>`)
+    // res.status(404).send(`<h1>404 Page</h1>`)
+    //code below is for Day 3 Part 3
+    res.render('error404')
 })
 
 
