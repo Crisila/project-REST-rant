@@ -5,6 +5,10 @@ const express = require('express')
 // 9. Initialize the app variable
 const app = express()
 
+//from Part 3, Day 3
+app.set('view engine', 'jsx')
+app.engine('jsx', require('express-react-views').createEngine())
+
 app.use('/places', require('./controllers/places'))
 
 // 10. Create the home page route
@@ -13,7 +17,9 @@ app.use('/places', require('./controllers/places'))
 //    c. Write callback function with req, res
 app.get('/', (req, res) => {
     //    d. Call res.send(‘hello world’) 
-    res.send('Hello World')
+    // res.send('Hello World')
+    //code below is from day 3 part 3
+    res.render('home')
 
 })
 
