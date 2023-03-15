@@ -10,6 +10,8 @@ app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
 
 app.use('/places', require('./controllers/places'))
+//Part 4: part 2 - to let Express know what you're going to call your static folder
+app.use(express.static('public'))
 
 // 10. Create the home page route
 //    a. Call app.get()

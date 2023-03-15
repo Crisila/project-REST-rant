@@ -1,15 +1,13 @@
 const React = require('react')
 const Def = require('./default')
 
-function index(data) {
+function index (data) {
     let placesFormatted = data.places.map((places) => {
         return (
-            <Def>
-                <main>
-                    <h1>{places.name}</h1>
+            <div>
+                    <h2>{places.name}</h2>
                     <img src={place.pic} alt={place.name}/>
-                </main>
-            </Def>
+            </div>
         )
     })
     return (
