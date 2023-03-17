@@ -9,7 +9,7 @@ function index ({data}) {
                     <p className='text-center'>
                         {place.cuisines}
                     </p>
-                    <img src={place.pic} alt={place.name}/>
+                    <img src={place.pic} alt={place.nam}/>
                     <p className='text-center'>
                         Located in {place.city}, {place.state}
                     </p>
@@ -19,7 +19,7 @@ function index ({data}) {
     return (
         <Def>
             <main>
-                <h1>Places to be and places to go!</h1>
+                <h1>placess to be and placess to go!</h1>
                 <div className='row'>
                     {placesFormatted}
                 </div>
