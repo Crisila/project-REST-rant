@@ -16,6 +16,10 @@ app.engine('jsx', require('express-react-views').createEngine())
 //Part 4: part 2 - to let Express know what you're going to call your static folder
 app.use(express.static('public'))
 
+//The form is set up, but now we need to make sure it is doing its job-sending data to be received by our back-end code
+app.use(express.urlencoded({extended:true}))
+// What does this do?: Remember, when we send data with the POST verb, that data gets encrypted for its trip across the internet. Because it is protected this way while in transit, that makes it extra safe for usernames, passwords, and other sensitive data. However, it also means we will need an extra tool to decrypt that data for us.
+
 // -----------------------CONTROLLERS & ROUTES-------------------------
 app.use('/places', require('./controllers/places'))
 // 10. Create the home page route
