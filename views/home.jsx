@@ -5,7 +5,7 @@ function home() {
    return (
     <Def>
         <main>
-            <h1>HOME</h1>
+            <h1>REST-Rant</h1>
             <div>
                 <img src="https://images.unsplash.com/photo-1490474504059-bf2db5ab2348?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80/Crisila/Software-Dev-Bootcamp/Backend/rest-rant/public/images/brenda-godinez-MsTOg6rhRVk-unsplash.jpg" alt="Chia Fruit Shake" />
                 <div>
