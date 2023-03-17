@@ -22,7 +22,7 @@ router.get('/', (req, res) => {
 })
 
 
-// GET /places/new
+// PART 5-2: GET /places/new
 router.get ('/new', (req, res) => {
   res.render('places/new')
 })
