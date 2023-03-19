@@ -2,6 +2,7 @@
 require('dotenv').config()
 // 8. Require express at the top of the file
 const express = require('express')
+const methodOverride = require('method-override')
 
 // 9. Initialize the app variable
 const app = express()
@@ -19,6 +20,9 @@ app.use(express.static('public'))
 //The form is set up, but now we need to make sure it is doing its job-sending data to be received by our back-end code
 app.use(express.urlencoded({extended:true}))
 // What does this do?: Remember, when we send data with the POST verb, that data gets encrypted for its trip across the internet. Because it is protected this way while in transit, that makes it extra safe for usernames, passwords, and other sensitive data. However, it also means we will need an extra tool to decrypt that data for us.
+
+app.use(methodOverride('_method'))
+
 
 // -----------------------CONTROLLERS & ROUTES-------------------------
 app.use('/places', require('./controllers/places'))
