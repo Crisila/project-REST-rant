@@ -9,6 +9,7 @@ function new_form () {
                 <h1>Add a New Place</h1>
                 {/* PART 5-3 */}
                 <form method='POST' action="/places">
+                    <div className='row'>
                     <div className='form-group'>
                         {/* 3. Let's update the label and input with specific information. The most important part to remember is the name attribute of the input tag. This is important because it will be the variable name we end up using on the back-end later. Less critical, but still important, is to make a for attribute on the label that corresponds to an id attribute on the input. That is for accessibility/screen readers! */}
                         <label htmlFor="name">Place Name</label>
@@ -37,8 +38,15 @@ function new_form () {
                         <input className='form-control' name="cuisines" id="cuisines" required />
                     </div>
 
-                    <input className='btn btn-primary' type="submit" value="Add Place" />
+                    <div className="form-group">
+                        <label for="founded">Founded Year</label>
+                        <input className="form-control" id="founded" name="founded" />
+                    </div>
 
+                    </div>
+                    <br />
+                    <input className='btn btn-primary' type="submit" value="Add Place" />
+                    
                 </form>
             </main>
         </Def>
