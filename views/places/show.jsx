@@ -1,5 +1,5 @@
 const React = require('react')
-const Def = require('../default')
+const Def = require('../default.jsx')
 
 function show (data) {
     return (
@@ -7,7 +7,7 @@ function show (data) {
           <main>
           <div> 
           <img src={data.place.pic} alt={data.place.name} className="img-max" />
-          <p>Located in {data.place.city}, {data.place.state} and serving {data.place.cuisines}</p>
+          <p>Located in {data.place.city}, {data.place.state}</p>
           </div> 
 
             <h1>
