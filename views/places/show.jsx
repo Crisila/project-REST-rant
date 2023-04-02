@@ -5,6 +5,11 @@ function show (data) {
     return (
         <Def>
           <main>
+          <div> 
+          <img src={data.place.pic} alt={data.place.name} className="img-max" />
+          <p>Located in {data.place.city}, {data.place.state} and serving {data.place.cuisines}</p>
+          </div> 
+
             <h1>
                 {data.place.name}
             </h1>
@@ -20,8 +25,12 @@ function show (data) {
                 <h2 className='text-center'>
                     Description
                 </h2>
-                    <p>No description</p>
-                    <p>Located in {data.place.city}, {data.place.state} and serving {data.place.cuisines}</p>
+                <h3>
+                    {data.place.showEstablished()}
+                </h3>
+                <h4>
+                    Serving {data.place.cuisines}
+                </h4>
                 
                 <br />
                 <h2 className='text-center'>Comments</h2>
