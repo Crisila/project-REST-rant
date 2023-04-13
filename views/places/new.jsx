@@ -48,7 +48,7 @@ function new_form (data) {
                     </div>
 
                     <div className="form-group">
-                        <label for="founded">Founded Year</label>
+                        <label htmlFor="founded">Founded Year</label>
                         <input 
                             type="text"
                             className="form-control" 
